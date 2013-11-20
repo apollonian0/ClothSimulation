@@ -97,8 +97,7 @@ namespace
 	float Jet_height							= -40.0f;
 }
 
-void
-initClothParams()
+void initClothParams()
 {
 	Cloth_param_defaults[ Stretch_k_param_index ] = 
 		Cloth.getStretchSpringStiffness();
@@ -115,8 +114,7 @@ initClothParams()
 		Cloth.getShearSpringStiffness();
 }
 
-void
-updateClothParams()
+void updateClothParams()
 {
 	Cloth.setShearSpringStiffness(
 		Cloth_params[ Shear_k_param_index ] );
@@ -125,8 +123,7 @@ updateClothParams()
 		Cloth_params[ Stretch_k_param_index ] );
 }
 
-void
-initJets()
+void initJets()
 {
 	const float dist_cutoff = 50.0f;
 
@@ -175,8 +172,7 @@ initJets()
 	Jets_1.push_back( jet4 );
 }
 
-void
-updateJets()
+void updateJets()
 {
 	for_each( Jets_1.begin(), Jets_1.end(),
 		[&] ( force::AirJet& jet )
@@ -199,8 +195,7 @@ updateJets()
 	} );
 }
 
-void
-spawnBall(
+void spawnBall(
 	const Vector& position,
 	const Vector& velocity )
 {
@@ -218,8 +213,7 @@ spawnBall(
 		&Balls.back() );
 }
 
-void
-spawnBallAtCamera()
+void spawnBallAtCamera()
 {
 	const math::Vec3f vel =
 		Camera.getLookAt().norm() * Ball_speed;
@@ -237,8 +231,7 @@ spawnBallAtCamera()
 		velocity );
 }
 
-void
-initCollisionDetector()
+void initCollisionDetector()
 {
 	Cloth.registerParticles(
 		Collision_detector );
@@ -252,14 +245,12 @@ void initCamera()
 		130.0f );
 }
 
-void
-initBalls()
+void initBalls()
 {
 	Balls.clear();
 }
 
-void 
-initGL()
+void initGL()
 {
 	glMatrixMode( GL_PROJECTION );
 	glLoadIdentity();
@@ -280,8 +271,7 @@ initGL()
 	glPointSize( 3 );
 }
 
-void
-resetSimulation(
+void resetSimulation(
 	bool cloth_is_vertical )
 {
 	Cloth_params[ Stretch_k_param_index ] = 
@@ -298,8 +288,7 @@ resetSimulation(
 	initCamera();
 }
 
-void
-drawBalls()
+void drawBalls()
 {
 	for_each( Balls.begin(), Balls.end(),
 		[&] ( const particle::Ball& ball )
@@ -308,8 +297,7 @@ drawBalls()
 	} );
 }
 
-void
-updateBalls( 
+void updateBalls( 
 	float dt )
 {
 	for_each( Balls.begin(), Balls.end(),
@@ -322,8 +310,7 @@ updateBalls(
 	} );
 }
 
-void
-drawJets()
+void drawJets()
 {
 	for_each( Jets_1.begin(), Jets_1.end(),
 		[&] ( force::AirJet& jet )
@@ -380,8 +367,7 @@ drawJets()
 	} );
 }
 
-void
-applyJets()
+void applyJets()
 {
 	if( !Apply_jets )
 		return;
@@ -477,8 +463,7 @@ applyJets()
 	}
 }
 
-void
-updateSimulation(
+void updateSimulation(
 	float dt )
 {
 	Cloth.setGlobalForce( 
@@ -499,8 +484,7 @@ updateSimulation(
 		collisions );
 }
 
-void
-drawFPSGraph()
+void drawFPSGraph()
 {
 	glMatrixMode( GL_MODELVIEW );
 	glPushMatrix();
