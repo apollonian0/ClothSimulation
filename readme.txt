@@ -1,6 +1,6 @@
 ***************************************************************
-	Program:	ClothSimulation
-	Author:		Ben Howenstein (C19)
+	ClothSimulation
+	Ben Howenstein (C19)
 									
 	Description:					
 							
