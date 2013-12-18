@@ -1,7 +1,7 @@
 ***************************************************************
-	Program:		ClothSimulation		
+	Program:			ClothSimulation		
 							
-	Author:			Ben Howenstein (C19)	
+	Author:				Ben Howenstein (C19)	
 	Last modified:		3/25/13			
 									
 	Description:					
