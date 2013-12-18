@@ -53,4 +53,4 @@ Simulation:
 	8:		toggle ball gravity on/off
 	K:		select shear springs
 	L:		select stretch springs
-	+/-:	increase/decrease spring stiffness
+	+/-:		increase/decrease spring stiffness
