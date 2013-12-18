@@ -11,7 +11,7 @@
 	the position of each particle with respect to	
 	simulation time and the sum of forces acting on it. 
 							
-	Costraint relaxation is applied between pairs of
+	Constraint relaxation is applied between pairs of
 	of connected particles to increase numerical	
 	stability for relatively large spring stiffness	
 	coefficients.					
