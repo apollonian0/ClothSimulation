@@ -296,46 +296,6 @@ Cloth::initShearConstraints()
 					&particles_[ cur_index - 2 * num_cols_ ],
 					2 * y_rest ) );
 			}
-
-			//if( row > 1 && col > 1 &&
-			//	row < num_rows_ - 2 && col < num_cols_ - 2 )
-			//{
-			//	//	--x--y edge
-			//	shear_constraints_.push_back( Constraint(
-			//		&particles_[ cur_index - 2],
-			//		&particles_[ cur_index - 2 * num_cols_ ],
-			//		2 * diag_rest ) );
-			//}
-
-			//if( row > 1 && col > 1 &&
-			//	row < num_rows_ - 2 && col < num_cols_ - 2 )
-			//{
-			//	//	++x++y edge
-			//	shear_constraints_.push_back( Constraint(
-			//		&particles_[ cur_index + 2],
-			//		&particles_[ cur_index + 2 * num_cols_ ],
-			//		2 * diag_rest ) );
-			//}
-
-			//if( row > 1 && col > 1 &&
-			//	row < num_rows_ - 2 && col < num_cols_ - 2 )
-			//{
-			//	//	--x++y edge
-			//	shear_constraints_.push_back( Constraint(
-			//		&particles_[ cur_index - 2],
-			//		&particles_[ cur_index + 2 * num_cols_ ],
-			//		2 * diag_rest ) );
-			//}
-			//
-			//if( row > 1 && col > 1 &&
-			//	row < num_rows_ - 2 && col < num_cols_ - 2 )
-			//{
-			//	//	++x--y edge
-			//	shear_constraints_.push_back( Constraint(
-			//		&particles_[ cur_index + 2],
-			//		&particles_[ cur_index - 2 * num_cols_ ],
-			//		2 * diag_rest ) );
-			//}
 		}
 	}
 }
